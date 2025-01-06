@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.borderanimation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid transparent;
+    background: linear-gradient(270deg, #ffffff, #005dfd, #00ffe5, #ff0000); /* Smooth gradient */
+    background-size: 300% 300%; /* Scale gradient for smooth motion */
+    animation: borderAnimation 5s linear infinite; /* Infinite animation */
+    z-index: -1;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    
+    }
+    50% {
+       
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+.maxwdthContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #161b22;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;/*  */
+   
+    min-height: 400px;
+    width: 400px;
+    padding: 1px;
+    
+
+    text-align: center;
+    z-index: 1; 
+}
+
+
+
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #58a6ff;
+}
+
+/* Input Fields */
+input {
+    outline: none;
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #8b949e;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #238636;
+    color: #ffffff;
+}
+
+button[type="submit"]:hover {
+    background-color: #2ea043;
+}
+
+button.google-login {
+    background-color: #db4437;
+    color: #ffffff;
+}
+
+button.google-login:hover {
+    background-color: #e15347;
+}
+
+/* Links */
+a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+/* Divider */
+.divider {
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #8b949e;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #30363d;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}

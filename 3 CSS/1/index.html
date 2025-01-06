@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demonstration</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .internal-style {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Demonstration</h1>
+
+    <!-- Inline CSS -->
+    <div style="background-color: #007BFF; color: white; padding: 10px; text-align: center; border-radius: 5px;">
+        This is styled using Inline CSS
+    </div>
+
+    <!-- Internal CSS -->
+    <div class="internal-style">
+        This is styled using Internal CSS
+    </div>
+
+    <!-- External CSS -->
+    <div class="external-style">
+        This is styled using External CSS
+    </div>
+</body>
+</html>

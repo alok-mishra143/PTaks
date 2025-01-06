@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template area</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            box-sizing: border-box;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container{
+            display: grid;
+        
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            border: 2px solid white;
+            color: white;
+            gap: 1rem;
+            padding: 2rem;
+            grid-template-areas: 
+            
+            "header header header"
+            "sidebar middlecontent middlecontent"
+            "sidebar item1 item2"
+            "footer footer footer";
+         
+        }
+
+        .item{
+            padding: 1rem;
+            align-content: center;
+            justify-content: center;
+            background-color: seagreen;
+            border: 1px solid blue;
+        }
+
+        #Header{
+            grid-area: header;
+        }
+        #SideBar{
+            grid-area: sidebar;
+        }
+        #MiddleContent{
+            grid-area: middlecontent;
+        }
+        #Item1{
+            grid-area: item1;
+        }
+        #item2{
+            grid-area: item2;
+        }
+        #Footer{
+            grid-area: footer;
+        }
+
+        
+    </style>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="Header">Header</div>
+        <div class="item" id="SideBar">SideBar</div>
+        <div class="item" id="MiddleContent">MiddleContent</div>
+        <div class="item" id="Item1">Item1</div>
+        <div class="item" id="item2">item2</div>
+        <div class="item" id="Footer">Footer</div>
+    </div>
+</body>
+</html>

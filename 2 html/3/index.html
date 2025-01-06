@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff6f61, #d55de3);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .blog-card {
+            background: #292929;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            flex: 1 1 calc(30% - 20px);
+            max-width: calc(30% - 20px);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .blog-card .content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .blog-card .content h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #ff6f61;
+        }
+
+        .blog-card .content p {
+            margin: 0;
+            font-size: 14px;
+            color: #cfcfcf;
+        }
+
+        .blog-card .content a {
+            text-decoration: none;
+            color: #ff6f61;
+            font-weight: bold;
+            margin-top: 10px;
+            align-self: flex-start;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card .content a:hover {
+            color: #d55de3;
+        }
+
+        @media (max-width: 768px) {
+            .blog-card {
+                flex: 1 1 calc(45% - 20px);
+                max-width: calc(45% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        
+
+        
+     
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Stylish Blog</h1>
+    </header>
+
+    <div class="container">
+        <div class="blog-card">
+            <img src="images/im1.png" alt="Blog Image">
+            <div class="content">
+                <h3>The Different Types of Lizards</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolor laborum fugit voluptas aliquid tempora nemo nostrum consequatur, iste quaerat.</p>
+                <a href="blogs/blog1.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im2.png" alt="Blog Image">
+            <div class="content">
+                <h3>Why Cats Are Cool</h3>
+                <p>This is a short description of the second blog post.</p>
+                <a href="blogs/blog2.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im3.png" alt="Blog Image">
+            <div class="content">
+                <h3>Hidden Flowers</h3>
+                <p>This is a short description of the third blog post.</p>
+                <a href="blogs/blog3.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im4.png" alt="Blog Image">
+            <div class="content">
+                <h3>Elephant: The Biggest Mammal</h3>
+                <p>This is a short description of the fourth blog post.</p>
+                <a href="blogs/blog4.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im5.png" alt="Blog Image">
+            <div class="content">
+                <h3>Unique Forests</h3>
+                <p>This is a short description of the fifth blog post.</p>
+                <a href="blogs/blog5.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im6.png" alt="Blog Image">
+            <div class="content">
+                <h3>Plastic Waste</h3>
+                <p>This is a short description of the sixth blog post.</p>
+                <a href="blogs/blog6.html">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="images/im1.png" alt="Blog Image">
+            <div class="content">
+                <h3>The Different Types of Lizards</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolor laborum fugit voluptas aliquid tempora nemo nostrum consequatur, iste quaerat.</p>
+                <a href="blogs/blog1.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im2.png" alt="Blog Image">
+            <div class="content">
+                <h3>Why Cats Are Cool</h3>
+                <p>This is a short description of the second blog post.</p>
+                <a href="blogs/blog2.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im3.png" alt="Blog Image">
+            <div class="content">
+                <h3>Hidden Flowers</h3>
+                <p>This is a short description of the third blog post.</p>
+                <a href="blogs/blog3.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im4.png" alt="Blog Image">
+            <div class="content">
+                <h3>Elephant: The Biggest Mammal</h3>
+                <p>This is a short description of the fourth blog post.</p>
+                <a href="blogs/blog4.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im5.png" alt="Blog Image">
+            <div class="content">
+                <h3>Unique Forests</h3>
+                <p>This is a short description of the fifth blog post.</p>
+                <a href="blogs/blog5.html">Read More</a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="images/im6.png" alt="Blog Image">
+            <div class="content">
+                <h3>Plastic Waste</h3>
+                <p>This is a short description of the sixth blog post.</p>
+                <a href="blogs/blog6.html">Read More</a>
+            </div>
+        </div>
+
+
+      
+    </div>
+
+</body>
+</html>

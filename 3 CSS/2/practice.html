@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Methods Demo</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+            border: 2px solid #7c7c7c;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .item {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Example 1: Row */
+        .row {
+            flex-direction: row;
+        }
+
+        /* Example 2: Column */
+        .column {
+            flex-direction: column;
+        }
+
+        /* Example 3: Justify Content */
+        .justify {
+            justify-content: space-between;
+        }
+
+        /* Example 4: Align Items */
+        .align {
+            align-items: center;
+        }
+
+        /* Example 5: Wrap */
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap .item {
+            flex: 1 1 30%;
+        }
+
+        @media (min-width: 768px) {
+        .box1 {
+            background-color: green !important;
+        }
+    }
+    @media (min-width: 992px) {
+        .box1 {
+            background-color: yellow !important;
+        }
+    }
+    @media (min-width: 1200px) {
+        .box1 {
+            background-color: orange !important;
+        }
+    }
+
+   
+
+    .box1 {
+        height: 100px;
+        width: 100%;
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .shadowBox1 {
+        height: 100px;
+        width: 20%;
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 12px  5px   red;
+                /*    x   y     color   */
+    }
+
+    .shadowBox2 {
+        height: 100px;
+        width: 20%;
+        background-color: #0364cc;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 12px  5px 20px  10px  rgb(0, 141, 19);
+                /*    x   y   blur radius   color   */
+    }
+
+    .shadowBox3 {
+        height: 100px;
+        width: 20%;
+        background-color: #004997;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: inset 12px  5px 20px  10px  rgb(255, 0, 200);
+                /*    x   y   blur radius   color   */
+    }
+
+    .shadowBox4 {
+        height: 100px;
+        width: 20%;
+        background-color: #013369;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 12px  5px 20px   red ,-15px 8px 10px green;
+              
+    }
+    .animationBox{
+        height: 50px;
+        width: 150px;
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        animation: animate 2s infinite;
+    }
+    .animationBox2{
+        height: 50px;
+        width: 150px;
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        animation: moveRight 2s infinite;
+    }
+    .animationBox3{
+        height: 50px;
+        width: 150px;
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+    }
+    .animationBox3:hover{
+        background-color: #25cc03;
+    }
+
+
+    .transformBox{
+        height: 50px;
+        width: 150px;
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        transition: all 1s ease-in-out;
+    }
+    .transformBox:hover{
+        transform: rotate(45deg) skew(20deg); ;
+        filter: blur(5px);
+      
+    }
+
+    @keyframes animate {
+        0% {
+            transform: scale(1);
+            background-color: #007BFF;
+        }
+        50% {
+            transform: scale(1.2);
+            background-color: #25cc03;
+        }
+        100% {
+            transform: scale(1);
+            background-color: #00eeff;
+        }
+        
+    }
+
+    @keyframes moveRight {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+        
+    }
+    </style>
+</head>
+<body>
+    <h1>Demonstrating Different Flexbox Methods</h1>
+
+    <h2>1. Flex Direction (Row)</h2>
+    <div class="container row">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>2. Flex Direction (Column)</h2>
+    <div class="container column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>3. Justify Content</h2>
+    <div class="container row justify">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>4. Align Items</h2>
+    <div class="container row align" style="height: 200px;">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>5. Flex Wrap</h2>
+    <div class="container row wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+
+
+    <div class="container">
+        <div class="box1">this is will change color in different screen size</div>
+    </div>
+
+
+    <div class="container">
+        <div class="shadowBox1">this is for  shadow box 1</div>
+        <div class="shadowBox2">this is for  shadow box 2</div>
+        <div class="shadowBox3">this is for  shadow box 3</div>
+        <div class="shadowBox4">this is for  shadow box 4</div>
+    </div>
+
+    <div class="container">
+        <div class="animationBox">this is for animation</div>
+        <div class="animationBox3">Hover me</div>
+        <div class="animationBox2">this is for animation2</div>
+    </div>
+
+    <div class="container">
+        <div class="transformBox">This will rotate when hover</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        input{
+            outline: none;
+        }
+        @keyframes fadeInLeft {
+          0% {
+            opacity: 0;
+            transform: translateX(-20%);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      
+        @keyframes fadeInRight {
+          0% {
+            opacity: 0;
+            transform: translateX(20%);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      
+        .animate-fadeInLeft {
+          animation: fadeInLeft 1s ease-in-out;
+        }
+      
+        .animate-fadeInRight {
+          animation: fadeInRight 1s ease-in-out;
+        }
+
+
+        .animate-marquee {
+        animation: marquee 25s ease-in-out infinite alternate;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+      </style>
+
+
+
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navbar -->
+    <nav class="flex   px-6 py-4  w-full  items-center justify-center fixed top-0 z-10">
+        <!-- Logo -->
+         <div class="bg-gray-800 flex backdrop-filter backdrop-blur-lg bg-opacity-50 rounded-xl p-4 w-[50%] justify-between items-center">
+        <div class="text-xl font-bold">Edtech</div>
+        <!-- Middle Item -->
+        <div class="hidden md:block text-lg font-medium">
+            <a href="#hero" class="px-4 py-2 hover:bg-gray-700 rounded">Home</a>
+            <a href="#features" class="px-4 py-2 hover:bg-gray-700 rounded">Features</a>
+            <a href="#testimonial" class="px-4 py-2 hover:bg-gray-700 rounded">Testimonial</a>
+            <a href="#contact" class="px-4 py-2 hover:bg-gray-700 rounded">Contact</a>
+        </div>
+        <!-- Button -->
+        <div>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Login</button>
+        </div>
+    </div>
+    </nav>
+
+
+    <div class="-z-1">
+
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row items-center justify-between px-6 py-12 mt-[5rem] max-w-7xl mx-auto h-screen  text-white " id="hero">
+        <!-- Left Side -->
+        <div class="w-full md:w-1/2 mb-6 md:mb-0 animate-fadeInLeft">
+            <h1 class="text-5xl font-extrabold mb-6">
+                Transform Your Digital Presence
+            </h1>
+            <p class="text-lg text-gray-300 mb-6">
+                Discover innovative solutions designed to elevate your business to new heights. Our expertise ensures seamless integration, enhanced performance, and unparalleled results tailored to your unique needs.
+            </p>
+            <!-- Call to Action Button -->
+            <a href="#services" class="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full shadow-lg transform transition duration-300 hover:scale-110">
+                Get Started
+            </a>
+        </div>
+    
+        <!-- Right Side -->
+        <div class="w-full md:w-1/2 animate-fadeInRight overflow-hidden rounded-lg shadow-lg relative group">
+            <img src="./images/hero.png" alt="Professional Hero Image" class="rounded-lg shadow-lg w-full h-full object-cover group-hover:scale-125 transition-transform duration-300 group-hover:blur-[5px]">
+            
+            <!-- Overlay Text on Image -->
+            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p class="text-2xl font-semibold text-white">Your Journey to Success Starts Here</p>
+            </div>
+        </div>
+        
+    </section>
+    
+
+
+    <!-- Trusted by  -->
+
+    <section class="py-16" >
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-center text-4xl font-extrabold mb-8">Trusted By</h2>
+          <div class="gap-6 items-center flex justify-between">
+            <!-- Google -->
+            <div class="flex justify-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+                   alt="Google Logo" 
+                   class="h-12 object-contain transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <!-- Microsoft -->
+            <div class="flex justify-center">
+              <img src="./images/microsoft.png" 
+                   alt="Microsoft Logo" 
+                   class="h-12 object-contain transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <!-- Patoliya Infotech -->
+            <div class="flex justify-center">
+              <img src="./images/Patoliya.png" 
+                   alt="Patoliya Infotech Logo" 
+                   class="h-12 object-contain transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            
+           
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Features Grid -->
+    <section class="px-6 py-12 bg-gray-900" id="features">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-100">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Interactive Learning -->
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 bg-blue-600 bg-opacity-20 text-blue-400 rounded-full">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-4">Interactive Learning</h3>
+                    <p class="text-gray-400">Engage students with interactive quizzes, videos, and gamified learning content.</p>
+                </div>
+                <!-- Card 2: Live Classes -->
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 bg-green-600 bg-opacity-20 text-green-400 rounded-full">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-4">Live Classes</h3>
+                    <p class="text-gray-400">Connect with instructors in real-time through live video and chat features.</p>
+                </div>
+                <!-- Card 3: AI-Powered Insights -->
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 bg-red-600 bg-opacity-20 text-red-400 rounded-full">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-4">AI-Powered Insights</h3>
+                    <p class="text-gray-400">Leverage AI to track student progress and provide personalized learning recommendations.</p>
+                </div>
+                <!-- Card 4: Mobile Learning -->
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 bg-yellow-600 bg-opacity-20 text-yellow-400 rounded-full">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-4">Mobile Learning</h3>
+                    <p class="text-gray-400">Access courses anytime, anywhere with a fully responsive mobile-friendly design.</p>
+                </div>
+                <!-- Card 5: Certification Programs -->
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 bg-purple-600 bg-opacity-20 text-purple-400 rounded-full">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 00-8 0v2"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11a4 4 0 110-8 4 4 0 010 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-4">Certification Programs</h3>
+                    <p class="text-gray-400">Provide industry-recognized certifications to boost career opportunities for learners.</p>
+                </div>
+                <!-- Card 6: Community Support -->
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 bg-indigo-600 bg-opacity-20 text-indigo-400 rounded-full">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a4 4 0 10-8 0v2"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-4">Community Support</h3>
+                    <p class="text-gray-400">Build a thriving community of learners and educators for collaboration and networking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonial -->
+    <section class="py-16 bg-gray-900 text-gray-100" id="testimonial">
+        <div class=" mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+            <!-- Marquee Wrapper -->
+            <div class="overflow-hidden relative">
+                <!-- Testimonial container that will scroll -->
+                <div class="flex space-x-8 animate-marquee">
+                    <!-- Testimonial 1 -->
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform duration-300 max-w-sm">
+                        <div class="flex items-center mb-4">
+                            <img src="https://avatar.vercel.sh/jack" alt="Avatar 1" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">John Doe</h3>
+                                <p class="text-sm text-gray-400">Student</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"This platform has completely transformed my learning experience. The interactive features keep me engaged, and the live sessions are incredibly helpful."</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform duration-300 max-w-sm">
+                        <div class="flex items-center mb-4">
+                            <img src="https://avatar.vercel.sh/rose" alt="Avatar 2" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">Jane Smith</h3>
+                                <p class="text-sm text-gray-400">Teacher</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"As an educator, I appreciate the flexibility and vast resources this platform offers. It’s a great tool for both teaching and student engagement."</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform duration-300 max-w-sm">
+                        <div class="flex items-center mb-4">
+                            <img src="https://avatar.vercel.sh/alok" alt="Avatar 3" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">Michael Lee</h3>
+                                <p class="text-sm text-gray-400">Parent</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"I am so impressed with how my child has been able to learn independently. The platform is user-friendly, and the course content is top-notch!"</p>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform duration-300 max-w-sm">
+                        <div class="flex items-center mb-4">
+                            <img src="https://avatar.vercel.sh/emily" alt="Avatar 4" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">Emily Johnson</h3>
+                                <p class="text-sm text-gray-400">Student</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"The tutorials are incredibly detailed, and I love how I can learn at my own pace. The course structure is clear and intuitive."</p>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform duration-300 max-w-sm">
+                        <div class="flex items-center mb-4">
+                            <img src="https://avatar.vercel.sh/susan" alt="Avatar 5" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">Susan Taylor</h3>
+                                <p class="text-sm text-gray-400">Teacher</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"This platform has been a lifesaver for both me and my students. The collaborative tools help us stay connected and productive."</p>
+                    </div>
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<div class=" max-w-7xl mx-auto px-6 py-12" id="contact">
+
+    <h2 class="text-3xl font-extrabold text-center mb-8">Contact Us</h2>
+
+    <div class="flex flex-col md:flex-row justify-between gap-12 py-16 bg-gray-900 text-gray-100">
+    <!-- Left Section: Footer Details -->
+    <section class="flex-1">
+
+        <!-- Quick Links and Social Media -->
+        <div class="flex flex-col   gap-12">
+            <!-- Company Info and Social Icons -->
+            <div class="flex-1">
+                <h4 class="text-xl font-semibold mb-4">About Us</h4>
+                <p class="text-gray-400 mb-4">
+                    We are passionate educators and technologists, revolutionizing learning through interactive solutions. With a deep commitment to shaping the future of education, we strive to empower individuals and organizations with innovative tools that foster engagement, collaboration, and creativity. Our approach blends cutting-edge technology with a student-centered philosophy to create personalized learning experiences that inspire curiosity, problem-solving, and lifelong learning. Whether you're a student seeking to expand your knowledge or an educator looking to enhance your teaching methods, we are here to support and guide you on your learning journey. Together, we can unlock the full potential of education in an ever-evolving world.
+                </p>
+                
+            </div>
+
+            <!-- Contact Info -->
+            <div class="flex-1">
+                <h4 class="text-xl font-semibold mb-4">Contact Information</h4>
+                <ul class="text-gray-400">
+                    <li><a href="mailto:info@yourcompany.com" class="hover:text-blue-500 transition-colors duration-300">info@yourcompany.com</a></li>
+                    <li><a href="tel:+123456789" class="hover:text-blue-500 transition-colors duration-300">+1 (234) 567-89</a></li>
+                    <li><p>123 Your Street, City, Country</p></li>
+                </ul>
+
+
+                <div class="flex space-x-6 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 4v12h12V7H7z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2c2.21 0 4 1.79 4 4 0 2.21-1.79 4-4 4-2.21 0-4-1.79-4-4 0-2.21 1.79-4 4-4zm0 14c3.31 0 6 2.69 6 6H6c0-3.31 2.69-6 6-6z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2a6 6 0 0 1-5.5 5.98V9h-2V7h2V5.6c0-2.3 1.3-3.6 3.5-3.6 1.2 0 2.4.1 2.4.1v2h-1.4c-1.2 0-1.6.9-1.6 1.8v2.2h3.2l-.5 2h-2.7v6.2a6 6 0 0 1-5.5 5.98A6 6 0 0 1 12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6h6a6 6 0 0 1 0 12z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Right Section: Contact Form -->
+    <section class="flex-1">
+        <form class="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <!-- Name -->
+            <div class="mb-6">
+                <label for="name" class="block text-lg font-semibold mb-2">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 bg-gray-700 text-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-2 border-gray-700 transition-all duration-300 ">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-6">
+                <label for="email" class="block text-lg font-semibold mb-2">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-4 bg-gray-700 text-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-2 border-gray-700 transition-all duration-300">
+            </div>
+
+            <!-- Subject -->
+            <div class="mb-6">
+                <label for="subject" class="block text-lg font-semibold mb-2">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full p-4 bg-gray-700 text-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-2 border-gray-700 transition-all duration-300">
+            </div>
+
+            <!-- Message -->
+            <div class="mb-6">
+                <label for="message" class="block text-lg font-semibold mb-2">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Your Message" class="w-full p-4 bg-gray-700 text-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-2 border-gray-700 transition-all duration-300"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-100 py-16 flex justify-center items-center w-full" id="footer">
+    <div class="mx-auto px-6 max-w-7xl flex flex-col items-center">
+        <div class="border-t border-gray-700 pt-6 w-full text-center">
+            <p class="text-gray-400 text-sm">
+                &copy; 2025 <span class="font-semibold">Your Company</span>. All Rights Reserved.
+            </p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</div>
+</body>
+</html>

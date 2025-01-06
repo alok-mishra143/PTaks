@@ -1,0 +1,82 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .item {
+    width: 200px;
+    height: 200px;
+    background: #444;
+    border: 2px solid #888;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    transform-style: preserve-3d; /* Ensures 3D effects are visible */
+    transition: transform 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .rotateX:hover {
+    transform: rotateX(45deg);
+
+  }
+  .rotateY:hover {
+    transform: rotateY(45deg);
+  }
+.rotateZ:hover {
+    transform: rotateZ(45deg);
+    }
+
+.translateX:hover{
+    transform: translateX(200px);
+}
+.translateY:hover{
+    transform: translateY(200px);
+}
+.translateZ:hover{
+    transform: perspective(800px) translateZ(200px);
+}
+
+.scaleX:hover{
+    transform: scaleX(2);
+}
+.scaleY:hover{
+    transform: scaleY(2);
+}
+.scaleZ:hover{
+    transform:perspective(800px) scaleZ(5) rotateY(45deg);
+}
+
+.SkewX:hover{
+    transform: skewX(45deg);
+}
+.SkewY:hover{
+    transform: skewY(45deg);
+}
+skewZ:hover{
+    transform: perspective(800px) skewZ(45deg) rotateY(45deg);
+}
+
+
+  
+  
