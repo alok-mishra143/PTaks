@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from "react";
+/* eslint-disable no-unused-vars */
+import { useState, useMemo } from "react";
 
 const Usememo = () => {
   const [userValue, setUserValue] = useState(0);
@@ -141,7 +142,8 @@ const Usememo = () => {
         </div>
 
         <p className="mt-8 text-center text-gray-400 text-sm italic border-t border-gray-700 pt-4">
-          Note: The "With useMemo" version only recalculates when inputs change
+          Note: The &quot;With useMemo&quot; version only recalculates when
+          inputs change
         </p>
       </div>
     </div>
