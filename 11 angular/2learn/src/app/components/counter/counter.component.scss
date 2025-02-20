@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #160127; // Dark background
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #2b1040; // Slightly lighter dark theme
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: max-content;
+
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c890f7; // Light purple text
+    margin: 0;
+  }
+
+  button {
+    background: #7d35f7; // Purple button
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+
+    &:hover {
+      background: #a66df0; // Lighter purple on hover
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; // Stack buttons vertically on small screens
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}

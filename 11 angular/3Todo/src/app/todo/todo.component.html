@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 class="header">Todo List</h2>
+  <div class="input-group">
+    <input [(ngModel)]="newTodo" placeholder="Enter a task" />
+    <button (click)="addTodo()">Add</button>
+  </div>
+
+  <ul>
+    <li
+      *ngFor="let todo of todos; let i = index"
+      [ngClass]="{ completed: todo.completed }"
+      class="todo"
+    >
+      <span class="span-complete">{{ todo.title }}</span>
+      <button (click)="toggleTodo(todo)" class="completed">✔</button>
+      <button (click)="deleteTodo(i)" class="delete">❌</button>
+    </li>
+  </ul>
+</div>

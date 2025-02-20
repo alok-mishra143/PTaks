@@ -1,0 +1,81 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #160127; // Dark purple background
+}
+
+.container {
+  background: #270041; // Deep purple container
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-size: 18px;
+    color: #c9a8f5; // Soft purple text
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #6a0dad; // Vibrant purple border
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+
+    &::placeholder {
+      color: #b089d4; // Light purple placeholder
+    }
+
+    &:focus {
+      border-color: #9c4dff;
+      box-shadow: 0 0 8px rgba(156, 77, 255, 0.5);
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    background: #9c4dff; // Vibrant purple button
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #7a3bcc;
+      box-shadow: 0 4px 8px rgba(156, 77, 255, 0.3);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+// 🌟 Responsive Styling
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  input,
+  button {
+    width: 100%;
+  }
+}

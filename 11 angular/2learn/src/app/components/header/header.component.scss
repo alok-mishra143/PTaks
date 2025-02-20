@@ -1,0 +1,26 @@
+header {
+  background: #270041; // Deep purple background
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  nav {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c9a8f5; // Soft purple text
+    text-align: center;
+  }
+}
+
+// 🌟 Responsive Design
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+
+  nav {
+    font-size: 20px;
+  }
+}

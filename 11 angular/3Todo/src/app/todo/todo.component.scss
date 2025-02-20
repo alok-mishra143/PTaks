@@ -1,0 +1,102 @@
+/* Center the container */
+.container {
+  max-width: 360px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #070707;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header */
+.header {
+  font-size: 22px;
+  color: #00ffbf;
+  margin-bottom: 15px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* Add Button */
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Add Button Styling */
+button:first-of-type {
+  background: #007bff;
+  color: white;
+}
+
+button:first-of-type:hover {
+  background: #0056b3;
+}
+
+/* Todo List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(41, 41, 41);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
+}
+
+/* Completed Task */
+.todo.completed {
+  background: #1f1f1f98;
+  color: white;
+
+  opacity: 0.7; /* Muted color effect */
+}
+
+.todo.completed:hover {
+  background: #1f1f1f;
+}
+
+/* Delete Button */
+.delete {
+  background: #dc3545;
+  color: white;
+}
+
+.delete:hover {
+  background: #c82333;
+}
+
+.span-complete {
+  flex: 1;
+  text-align: left;
+}

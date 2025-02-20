@@ -3,8 +3,8 @@ import HardAnimation from "./components/HardAnimation";
 
 function App() {
   return (
-    <div className="flex h-screen flex-col">
-      <EasyAnimation />
+    <div className="flex  flex-col">
+      {/* <EasyAnimation /> */}
       <HardAnimation />
     </div>
   );

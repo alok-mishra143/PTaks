@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="container">
+    <p>greating works</p>
+    <p>{{ meassage() }}</p>
+    <input
+      type="text"
+      (keyup)="keypress($event)"
+      placeholder="type some key to see the key press event"
+    />
+    <button (click)="changeMessage()">Change message</button>
+  </div>
+
+  <div>
+    <app-counter/>
+  </div>
+
+
+</div>
