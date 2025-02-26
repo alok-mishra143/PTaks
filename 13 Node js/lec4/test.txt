@@ -1,0 +1,42 @@
+
+1740551792285:::1 GET: /
+
+1740552259302:::1 GET: /api/users/
+
+1740552272274:::1 GET: /users/
+
+1740552302895:::1 GET: /api/users/
+
+1740552350267:::1 GET: /api/users/
+
+1740552424006:::1 GET: /api/users/
+
+1740552546593:::1 POST: /api/users/
+
+1740552677733:::1 DELETE: /api/users/67bea2bd836fa46ee9946533
+
+1740553160781:::1 DELETE: /api/users/67bea2bd836fa46ee9946533
+
+1740553174861:::1 POST: /api/users/
+
+1740553180818:::1 POST: /api/users/
+
+1740553187555:::1 GET: /api/users/
+
+1740553198729:::1 POST: /api/users/
+
+1740553204181:::1 GET: /api/users/
+
+1740553213572:::1 GET: /api/users/67beb96260368ada98a06c0a
+
+1740553250544:::1 GET: /api/users/67beb96260368ada98a06c0a
+
+1740553264180:::1 GET: /api/users/67beb96260368
+
+1740553372121:::1 PATCH: /api/users/67beb96260368
+
+1740553385674:::1 PATCH: /api/users/67beb96260368
+
+1740553397906:::1 PATCH: /api/users/67beb96260368ada98a06c0a
+
+1740553479766:::1 DELETE: /api/users/67beb96260368ada98a06c0a
