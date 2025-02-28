@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #4b5563;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: #1f2937;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center h-screen bg-black text-white">
+    <div class="w-full max-w-2xl bg-gray-900 p-6 rounded-lg shadow-lg">
+      <h1 class="text-3xl font-bold text-center mb-4">🔥 Chat App</h1>
+
+      <!-- Messages Container -->
+      <div
+        id="allmsg"
+        class="h-96 overflow-y-auto bg-gray-800 p-4 rounded-md space-y-3 flex flex-col"
+      ></div>
+
+      <!-- Input & Button -->
+      <div class="mt-4 flex gap-2">
+        <input
+          type="text"
+          id="MessageInput"
+          placeholder="Type your message..."
+          class="flex-1 p-3 rounded-md border border-gray-600 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          id="SendButton"
+          onclick="BtnClick()"
+          class="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition rounded-md font-semibold"
+        >
+          🚀 Send
+        </button>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+      const messageInput = document.getElementById("MessageInput");
+      const messages = document.getElementById("allmsg");
+
+      let userId = null;
+
+      socket.on("connect", () => {
+        console.log("Connected to server", socket.id);
+        userId = socket.id;
+      });
+
+      socket.on("uid", (id) => {
+        console.log("My user ID:", id);
+        userId = id;
+      });
+
+      function BtnClick() {
+        const message = messageInput.value.trim();
+        if (message) {
+          socket.emit("umessage", { userId, message });
+          addMessage(message, "self");
+          messageInput.value = "";
+        }
+      }
+
+      document.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") BtnClick();
+      });
+
+      socket.on("smessage", ({ userId: senderId, message }) => {
+        if (senderId !== userId) {
+          addMessage(message, "other");
+        }
+      });
+
+      function addMessage(msg, type) {
+        const messageBubble = document.createElement("div");
+        messageBubble.className = `p-3 rounded-xl max-w-xs ${
+          type === "self"
+            ? "bg-blue-500 self-end text-white ml-auto"
+            : "bg-gray-700 self-start text-gray-200 mr-auto"
+        }`;
+
+        messageBubble.textContent = msg;
+        messages.appendChild(messageBubble);
+
+        // Auto-scroll to the latest message
+        messages.scrollTop = messages.scrollHeight;
+      }
+    </script>
+  </body>
+</html>
