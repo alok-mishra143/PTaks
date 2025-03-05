@@ -1,0 +1,24 @@
+{
+  "name": "1",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun --watch index.js",
+    "db:studio": "bunx prisma studio",
+    "db:generate": "bunx prisma generate",
+    "db:migrate": "bunx prisma migrate dev"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2",
+    "prisma": "^6.4.1"
+  }
+}
